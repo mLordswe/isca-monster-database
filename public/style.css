@@ -1,56 +1,76 @@
-:root
-{
-	--isca-blue: #00a8ff;
-	--isca-background-light: #c6d5ff;
-	--isca-background-dark: #36475b;
-	--isca-accent: #ffcc00;
-	
-	--header-size: 150px;
-	--footer-size: 150px;
+:root {
+  --isca-blue: #00a8ff;
+  --isca-background-light: #c6d5ff;
+  --isca-background-dark: #36475b;
+  --isca-accent: #ffcc00;
+
+  --header-size: 150px;
+  --footer-size: 150px;
 }
 
-body
-{
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-	grid-template-rows: var(--header-size) auto auto var(--footer-size);
-	grid-template-areas:
-	"header header"
-	"aside main"
-	"aside main"
-	"footer footer";
-	gap: 0;
-	
-	margin: 0;
-	padding: 0;
-	min-height: 100vh;
+body {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: var(--header-size) auto auto var(--footer-size);
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "aside main"
+    "footer footer";
+  gap: 0;
+
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
-header
-{
-	grid-area: header;
-	background-color: var(--isca-background-dark);
-	color: white;
+header {
+  grid-area: header;
+  background-color: var(--isca-background-dark);
+  color: white;
 }
 
-aside
-{
-	grid-area: aside;
-	background-color: var(--isca-background-light);
-	
-	display: grid;
-	grid-template-rows: 1fr 1fr;
+aside {
+  grid-area: aside;
+  background-color: var(--isca-background-light);
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
 
-main
-{
-	grid-area: main;
-	background-color: var(--isca-background-light);
+main {
+  grid-area: main;
+  background-color: var(--isca-background-light);
 }
 
-footer
-{
-	grid-area: footer;
-	background-color: var(--isca-background-dark);
-	color: white;
+footer {
+  grid-area: footer;
+  background-color: var(--isca-background-dark);
+  color: white;
+}
+form {
+  display: grid;
+  grid-template-rows: 2rem auto;
+
+  justify-content: start;
+
+  #monster-submit {
+    order: 2;
+    margin-left: 8rem;
+  }
+}
+span {
+  display: grid;
+  grid-template-rows: 2rem auto;
+  grid-template-columns: 8rem auto;
+}
+
+span > span {
+  display: grid;
+  grid-template-columns: 2rem 4rem 1fr;
+  grid-template-rows: 2rem auto;
+}
+
+#filtered-search-monster-form-submit {
+  margin-left: 8rem;
 }
